@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c6d3db;
+  font-family: Arial, Helvetica;
+  font-size: 4vw;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "display display"
+    "buttons buttons";
+  background-color: #eee;
+  /* width: 80vw; */
+  height: 69.5vh;
+  border-radius: 5px;
+}
+
+.display {
+  grid-area: display;
+  background: none;
+  text-align: right;
+  height: 10vh;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  padding-right: 20px;
+  padding-top: 2px;
+}
+
+.buttons {
+  grid-area: buttons;
+  /* background-color: #3498db; */
+  /* width: 80vw; */
+  /* height: 60vh; */
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 90px 1fr 1fr;
+  grid-template-columns: 1fr 200px;
+  grid-template-areas:
+    "equal equal"
+    "numberspad operators"
+    "numberspad operators";
+
+  border: 1px solid #000;
+}
+
+.equal {
+  grid-area: equal;
+  background-color: #d9dd9b;
+  text-align: center;
+  height: 9.9vh;
+  border: 1px solid #000;
+}
+.operators {
+  grid-area: operators;
+  background-color: #f8c453;
+  text-align: center;
+}
+
+.operators div {
+  border-top: 2px solid #000;
+  height: 12.5vh;
+  padding-top: 15px;
+}
+
+.numberspad {
+  grid-area: numberspad;
+  /* background-color: #e49ac3; */
+  border: 1px solid #000;
+  text-align: center;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  height: 50vh;
+  place-items: center;
+}
+
+.numberspad div {
+  /* border: 2px solid #000; */
+  padding: 10px;
+  width: 10vw;
+}
+.operators div:hover {
+  border: 1px solid #000;
+  background-color: #c6d3db;
+}
+.numberspad div:hover {
+  background-color: #c6d3db;
+  /* box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2); */
+}
+.equal:hover {
+  background-color: #c6d3db;
+}
