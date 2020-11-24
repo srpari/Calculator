@@ -1,103 +1,66 @@
 * {
-  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
 body {
-  background-color: #c6d3db;
-  font-family: Arial, Helvetica;
-  font-size: 4vw;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  padding-bottom: 30px;
-  padding-top: 30px;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  font-family: sans-serif;
 }
-.container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "display display"
-    "buttons buttons";
-  background-color: #eee;
-  /* width: 80vw; */
-  height: 69.5vh;
-  border-radius: 5px;
+.calculator {
+  width: 40vw;
+  padding-bottom: 15px;
+  border-radius: 7px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 5px #0000009c;
 }
-
 .display {
-  grid-area: display;
-  background: none;
-  text-align: right;
-  height: 10vh;
-  border-top: 2px solid #000;
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
-  padding-right: 20px;
-  padding-top: 2px;
-}
-
-.buttons {
-  grid-area: buttons;
-  /* background-color: #3498db; */
-  /* width: 80vw; */
-  /* height: 60vh; */
-  border-radius: 5px;
-  display: grid;
-  grid-template-rows: 90px 1fr 1fr;
-  grid-template-columns: 1fr 200px;
-  grid-template-areas:
-    "equal equal"
-    "numberspad operators"
-    "numberspad operators";
-
-  border: 1px solid #000;
-}
-
-.equal {
-  grid-area: equal;
-  background-color: #d9dd9b;
-  text-align: center;
-  height: 9.9vh;
-  border: 1px solid #000;
-}
-.operators {
-  grid-area: operators;
-  background-color: #f8c453;
-  text-align: center;
-}
-
-.operators div {
-  border-top: 2px solid #000;
-  height: 12.5vh;
-  padding-top: 15px;
-}
-
-.numberspad {
-  grid-area: numberspad;
-  /* background-color: #e49ac3; */
-  border: 1px solid #000;
-  text-align: center;
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  height: 50vh;
-  place-items: center;
-}
-
-.numberspad div {
-  /* border: 2px solid #000; */
+  width: 100%;
+  height: 100px;
+  border: none;
+  box-sizing: border-box;
   padding: 10px;
-  width: 10vw;
+  font-size: 2rem;
+  background-color: #3b3b3b;
+  color: #fff;
+  text-align: right;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
-.operators div:hover {
-  border: 1px solid #000;
-  background-color: #c6d3db;
+.row {
+  display: flex;
+  justify-content: space-between;
 }
-.numberspad div:hover {
-  background-color: #c6d3db;
-  /* box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2); */
+button {
+  width: 70px;
+  height: 70px;
+  /* border-radius: 10%; */
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  background-color: #3b3b3b;
+  color: #fff;
+  margin: 10px;
 }
-.equal:hover {
-  background-color: #c6d3db;
+
+button:hover {
+  cursor: pointer;
+}
+
+#equal {
+  width: 39.5vw;
+  outline: none;
+  font-size: 1.5rem;
+  /* background-color: #a9ecd2; */
+  color: #000;
+  margin: 5px;
+}
+.operator {
+  background-color: #e4bf59;
+  color: #000;
 }

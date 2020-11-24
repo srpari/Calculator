@@ -1,28 +1,22 @@
 
-let display = document.getElementById('display');
-let clear = document.getElementById('clear');
-let number = document.querySelectorAll('.numberspad div');
-let operator  = document.querySelectorAll('.operators div');
-let result = false;
+const buttons = document.querySelectorAll('button');
+const display = document.querySelector('.display');
 
-clear.addEventListener("click", function() {
-    display.innerHTML = "0";
-})
-
-// for numbers
-number.forEach(element => {    
-    element.addEventListener("click", function(e){
-
-        display.innerHTML += e.target.innerHTML;
-
-    } )
+buttons.forEach(function(button) {
+  button.addEventListener('click', calculate);
 });
 
-// for operators
-operator.forEach(element => {    
-    element.addEventListener("click", function(e){
+// calculate function
+function calculate(e) {
+  const clickedButtonValue = e.target.value;
 
-        display.innerHTML += e.target.innerHTML;
-
-    } )
-});
+  if (clickedButtonValue === '=') {
+    if (display.value !== '') {
+      display.value = eval(display.value);
+    }
+  } else if (clickedButtonValue === 'C') {
+    display.value = '';
+  } else {
+    display.value += clickedButtonValue;
+  }
+}

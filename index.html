@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Calculator</title>
 </head>
 <body>
-    <div class="container">
-        <div class="display" id="display">92</div>
-        <div class="buttons">
-            <div class="equal" id="result">=</div>
-            <div class="operators">
-                <div>+</div>
-                <div>&minus;</div>
-                <div>x</div>
-                <div>&divide;</div>
-            </div>
-            <div class="numberspad">
-                <div>7</div>
-                <div>8</div>
-                <div>9</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>0</div>
-                <div>.</div>  
-                <div id="clear">C</div>       
-            </div>                     
-        </div>  
+
+  <div class="calculator">
+    <input type="text" class="display" disabled>    
+    <button id="equal" value="="  class="operator">=</button>
+   
+    <div class="keys">     
+      <div class="row">
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button value="+" class="operator">+</button>
+      </div>
+      <div class="row">
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button value="-" class="operator">-</button>
+      </div>
+      <div class="row">
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button value="*" class="operator">*</button>
+      </div>
+      <div class="row">
+        <button value="C" class="operator">C</button>
+        <button value="0">0</button>
+        <button value="." class="operator">&dot;</button>
+        <button value="/" class="operator">/</button>
+      </div>
     </div>
-    <script src="main.js"></script>
+
+  </div>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
